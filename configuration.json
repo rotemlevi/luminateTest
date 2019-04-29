@@ -1,0 +1,29 @@
+{
+	"tests": {
+		"DNS-LOOKUP": {
+			"hosts": [
+				{
+					"hostName": "https://www.facebook.com"
+				},
+				{
+					"hostName": "https://www.google.com"
+				}
+			]
+		},
+		"DOWN-BANDWIDTH": {
+			"alert": {
+				"enabled": true,
+				"threshold": 0.25,
+				"mail": "rotem85.levi@gmail.com"
+			},
+			"hosts": [
+				{
+					"hostName": "http://ww1co1il"
+				},
+				{
+					"hostName": "http://www.wallashops.co.il"
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,29 @@
+{
+    "name": "shell-test",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "bin": "index.js",
+    "scripts": {
+        "start": "node ./index.js",
+        "build": "pkg ."
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "key-file-storage": "^2.1.5",
+        "lodash.merge": "^4.6.1",
+        "sendmail": "^1.4.1",
+        "winston": "^3.2.1"
+    },
+    "pkg": {
+        "assets": [
+            "db/**/*",
+            "logs/**/*",
+            "reports/**/*"
+        ],
+        "targets": [
+            "node8"
+        ]
+    }
+}

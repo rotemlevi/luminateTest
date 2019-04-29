@@ -1,0 +1,13 @@
+dev:
+npm i;
+npm start;
+
+compile:
+https://github.com/zeit/pkg
+npm install -g pkg
+npm run-script build
+
+executable files for linux and windows:
+index-linux
+index-macos
+shell-test.exe
