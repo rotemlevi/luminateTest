@@ -2,13 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const winston = require('winston');
 const reportsDirectory = path.join(process.cwd(), 'reports');
-const {
-    splat,
-    combine,
-    timestamp,
-    printf,
-    colorize
-} = winston.format;
+const { splat, combine, timestamp, printf } = winston.format;
 
 fs.existsSync(reportsDirectory) || fs.mkdirSync(reportsDirectory);
 
@@ -26,27 +20,16 @@ const transports = [
 ];
 
 // meta param is ensured by splat()
-const myFormat = printf(({
-    timestamp,
-    level,
-    message,
-    meta
-}) => {
+const myFormat = printf(({ message }) => {
     var msg = "";
     try {
         msg = message[Object.keys(message)[0]].message;
-    } finally {
-
-    }
+    } finally {}
     return msg;
 });
 
 const logger = new winston.createLogger({
-    format: combine(
-        timestamp(),
-        splat(),
-        myFormat
-    ),
+    format: combine( timestamp(), splat(), myFormat ),
     transports,
     exitOnError: false
 });

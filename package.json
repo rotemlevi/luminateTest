@@ -18,9 +18,7 @@
     },
     "pkg": {
         "assets": [
-            "db/**/*",
-            "logs/**/*",
-            "reports/**/*"
+            "db/**/*"
         ],
         "targets": [
             "node8"

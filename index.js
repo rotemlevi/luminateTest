@@ -46,7 +46,6 @@ function getBandwidth(result) {
         });
 
         var results = await (Promise.all(tests));
-
         results = results.forEach(async (result) => {
             var entry = null;
             if (TestTypes[result.testType]) entry = TestTypes[result.testType].generate(result);
@@ -78,5 +77,4 @@ function getBandwidth(result) {
     } catch (err) {
         Logger.error(err);
     }
-
 })();
